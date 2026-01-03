@@ -4,7 +4,7 @@ def connect():
     return myconn.connect(
         host="localhost",
         user="root",
-        password="Swathi@2009",
+        password="your_pw",
         database="bank_system"
     )
 

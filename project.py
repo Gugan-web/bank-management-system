@@ -7,7 +7,7 @@ def connect():
         password="your_pw",
         database="bank_system"
     )
-
+#replace your pw with your password to connect to mysql
 def create_account():
     global db, cursor
     name=input("Enter your First name = ")

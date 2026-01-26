@@ -1,3 +1,5 @@
+#This a python code which consist SQL queries within, make tables after setting up of mysql in the mysql workbench manually
+
 import mysql.connector as myconn
 
 def connect():

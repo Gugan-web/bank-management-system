@@ -3,44 +3,44 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Status-Project-22C55E?style=for-the-badge" alt="Project Status" />
+  <img src="https://img.shields.io/badge/Status-Prototype-22C55E?style=for-the-badge" alt="Status" />
 </p>
 
-A bank data management project built using Python and MySQL. It allows efficient management of core banking operations such as customer account creation, deposits, withdrawals, balance inquiry, and transaction record tracking.
+A bank data management system developed using Python and MySQL. The project focuses on core banking operations such as customer account creation, deposits, withdrawals, balance checking, and transaction tracking.
 
 ## Overview
 
-This project is a simple but practical banking system that combines Python application logic with a MySQL database backend. Python handles the user interaction and core business logic, while MySQL stores and manages persistent account information and transaction history securely.
+This project is a simple but practical banking application that combines Python application logic with a relational database backend. Python manages the business logic and user interactions, while MySQL stores customer and transaction data securely.
 
-The system is designed for educational use, prototype development, and database-driven application learning.
+The system is suitable for learning database-driven application development, CRUD operations, and basic financial workflow design.
 
 ## System Architecture
 
 ```mermaid
 flowchart LR
-    A[User] --> B[Python App]
+    A[User] --> B[Python Application]
     B --> C[MySQL Connector]
     C --> D[(MySQL Database)]
-    D --> E[customers table]
-    D --> F[transactions table]
+    D --> E[customers]
+    D --> F[transactions]
 ```
 
 ## Key Features
 
 - Customer account creation
-- Deposit processing
-- Withdrawal handling
+- Deposit operations
+- Withdrawal operations
 - Balance inquiry
-- Transaction record tracking
+- Transaction history tracking
 - Persistent data storage with MySQL
-- Error handling and input validation
+- Basic validation and error handling
 
 ## Implementation Details
 
-- Python handles the application logic and CLI/GUI operations.
-- MySQL stores and manages persistent bank data.
-- SQL queries are executed through Python's MySQL connector to perform CRUD operations on customer and transaction tables.
-- The project can be extended with authentication, admin access, and reporting features.
+- Python handles the application logic for user operations.
+- MySQL stores persistent banking data.
+- SQL queries are executed through the Python MySQL connector to perform CRUD operations.
+- This project can be expanded with authentication, admin panels, statement generation, and reporting features.
 
 ## Database Tables
 
@@ -51,7 +51,7 @@ flowchart LR
 | id | INT | Unique customer ID |
 | name | VARCHAR | Customer name |
 | email | VARCHAR | Customer email address |
-| phone | VARCHAR | Customer mobile number |
+| phone | VARCHAR | Contact number |
 | balance | DECIMAL | Current account balance |
 
 ### transactions
@@ -62,15 +62,15 @@ flowchart LR
 | customer_id | INT | Related customer |
 | type | VARCHAR | Deposit or withdrawal |
 | amount | DECIMAL | Transaction amount |
-| date | DATE | Date of the transaction |
-| time | TIME | Time of the transaction |
+| date | DATE | Transaction date |
+| time | TIME | Transaction time |
 
 ## Security & Reliability
 
-- Proper authentication and access control can be added for secure use.
-- Input validation helps prevent invalid or malicious values.
-- Error-handling mechanisms are essential for reliable execution and data integrity.
-- MySQL provides persistent storage and structured data management.
+- Input validation helps prevent invalid data entry.
+- Error-handling mechanisms improve reliability during execution.
+- MySQL ensures structured and persistent storage.
+- Additional security features such as login authentication and role-based access can be added in future improvements.
 
 ## Repository Structure
 
@@ -93,7 +93,7 @@ bank-management-system/
 
 - Python 3.x
 - MySQL Server
-- MySQL connector library
+- MySQL connector for Python
 
 ### Install dependencies
 
@@ -101,7 +101,7 @@ bank-management-system/
 pip install -r requirements.txt
 ```
 
-### Run the project
+### Run the application
 
 ```bash
 python project.py
@@ -112,13 +112,13 @@ python project.py
 Before running the project:
 
 1. Create a MySQL database.
-2. Create the required tables for customers and transactions.
-3. Update the database credentials in the project file.
-4. Ensure the connection parameters match your local MySQL setup.
+2. Create the required `customers` and `transactions` tables.
+3. Update the database credentials inside the Python project file.
+4. Make sure the connection settings match your MySQL server configuration.
 
 ## Notes
 
-This project uses Python interfacing with MySQL and requires manual configuration of the database tables and credentials. It is designed as a learning project and can be extended into a more complete banking application with login features, reports, and admin dashboards.
+This project uses Python to interface with MySQL, and the database tables need to be created manually before use. It is intended as a practical learning project and can be extended into a more complete banking system.
 
 ## License
 
@@ -127,5 +127,5 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 ---
 
 <p align="center">
-  <strong>Built for banking data management, Python + MySQL learning, and database-driven application practice.</strong>
+  <strong>Built for banking data management, database learning, and Python + MySQL application development.</strong>
 </p>
